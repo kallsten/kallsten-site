@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mercado Livre ou Shopee: qual é o seu caminho? | Kallsten Assessoria</title>
+<meta name="description" content="Responda 7 perguntas rápidas e descubra por qual marketplace começar, seu ponto de partida e o que estudar primeiro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!--
+  ============ ANTES DE PUBLICAR ============
+  1. Troque o valor de PAGINA_DE_VENDAS (no script, lá embaixo) pelo endereço real da página de vendas.
+  2. Cole o Pixel da Meta abaixo desta linha. O quiz já dispara os eventos "QuizStart" e "QuizComplete"
+     (fbq trackCustom) se o Pixel estiver instalado.
+  Este quiz não coleta nenhum dado pessoal: as respostas ficam só no navegador da pessoa.
+  ===========================================
+-->
+<style>
+:root{--navy:#15233F;--navy2:#2A436E;--yel:#FFC629;--yel-d:#F2B400;--accent:#9A6200;--cream:#FBF7F0;--ink:#16202A;--muted:#5E6B73;--line:#E4DED3;--mint:#E3F1EC;--mint-ink:#1D6B57;--coral:#FFE8E2}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55;font-size:17px;min-height:100vh}
+.top{background:var(--navy);color:#fff;padding:14px 20px}
+.top .in{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-weight:800;letter-spacing:.2px}
+.top small{font-weight:500;opacity:.75;font-size:12px;letter-spacing:1.2px;text-transform:uppercase}
+.wrap{max-width:760px;margin:0 auto;padding:28px 20px 60px}
+.screen{display:none;animation:fade .35s ease}
+.screen.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.pill{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:30px;padding:6px 14px;font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(30px,6vw,44px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 14px;color:var(--navy);font-weight:900}
+h1 span{background:linear-gradient(transparent 58%,#FFE38A 58%)}
+h2{font-size:clamp(22px,4.6vw,30px);line-height:1.18;letter-spacing:-.01em;color:var(--navy);margin:8px 0 6px;font-weight:800}
+.lead{font-size:18px;color:#3b4852}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 26px}
+.chips span{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:14px;font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--yel);color:var(--navy);border:0;border-radius:12px;padding:17px 30px;font:inherit;font-weight:800;font-size:18px;cursor:pointer;text-decoration:none;box-shadow:0 8px 22px rgba(255,198,41,.35);transition:transform .15s,background .15s}
+.btn:hover{background:var(--yel-d);transform:translateY(-2px)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.link{background:none;border:0;color:var(--muted);font:inherit;font-size:15px;cursor:pointer;padding:10px 0;text-decoration:underline}
+.progress{height:8px;background:#EAE4D8;border-radius:10px;overflow:hidden;margin:6px 0 22px}
+.progress div{height:100%;background:var(--navy);width:0;transition:width .35s}
+.step{font-size:13px;font-weight:700;letter-spacing:1.4px;color:var(--accent);text-transform:uppercase}
+.hint{color:var(--muted);font-size:15px;margin:0 0 18px}
+.opts{display:grid;gap:12px}
+.opt{display:flex;gap:14px;align-items:center;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:16px 18px;font:inherit;font-size:16.5px;cursor:pointer;color:var(--ink);transition:border-color .15s,transform .1s}
+.opt:hover{border-color:var(--navy2)}
+.opt .dot{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid #B9C1CC;position:relative}
+.opt.sel{border-color:var(--navy);background:#F4F6FA}
+.opt.sel .dot{border-color:var(--navy);background:var(--navy)}
+.opt.sel .dot:after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--yel)}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+.hero-res{background:var(--navy);color:#fff;border-radius:20px;padding:28px 24px;margin:16px 0 18px;position:relative;overflow:hidden}
+.hero-res:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:var(--navy2);right:-70px;top:-90px}
+.hero-res *{position:relative;z-index:1}
+.hero-res .tag{display:inline-block;background:var(--yel);color:var(--navy);font-weight:800;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;border-radius:8px;padding:5px 10px}
+.hero-res h2{color:#fff;font-size:clamp(26px,5.6vw,36px);margin:12px 0 8px}
+.hero-res p{color:#D3DCEB;margin:0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+.mini{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+.mini b{display:block;font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.mini strong{display:block;color:var(--navy);font-size:18px;line-height:1.25;margin-bottom:4px}
+.mini span{font-size:14.5px;color:var(--muted)}
+.plan{list-style:none;padding:0;margin:12px 0 0;counter-reset:p}
+.plan li{counter-increment:p;position:relative;padding:10px 0 10px 44px;border-bottom:1px solid var(--line)}
+.plan li:before{content:counter(p);position:absolute;left:0;top:9px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--yel);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.plan li:last-child{border:0}
+.math{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;margin:18px 0}
+.math .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line);font-size:16px}
+.math .row b{color:var(--navy);white-space:nowrap;margin-left:12px}
+.math .big{font-size:30px;font-weight:900;color:var(--navy);text-align:center;margin:14px 0 4px}
+.small{font-size:13px;color:var(--muted)}
+.cta{background:var(--navy);color:#fff;border-radius:20px;padding:26px 24px;text-align:center;margin-top:20px}
+.cta h3{margin:0 0 8px;font-size:24px;line-height:1.2}
+.cta p{color:#D3DCEB;margin:0 0 18px}
+.cta .btn{width:100%;max-width:420px}
+.foot{text-align:center;font-size:12.5px;color:var(--muted);padding:10px 20px 40px;max-width:760px;margin:0 auto}
+@media (max-width:640px){
+  .wrap{padding:22px 16px 50px}
+  .grid3{grid-template-columns:1fr}
+  .btn{width:100%}
+  .opt{padding:15px}
+}
+</style>
+</head>
+<body>
+<div class="top"><div class="in">Kallsten Assessoria <small>Quiz gratuito</small></div></div>
+
+<main class="wrap">
+  <!-- INTRO -->
+  <section class="screen on" id="intro">
+    <span class="pill">7 perguntas · cerca de 1 minuto · gratuito</span>
+    <h1>Mercado Livre ou Shopee: <span>qual é o seu caminho?</span></h1>
+    <p class="lead">Cada marketplace favorece um tipo de produto, de capital e de rotina. Responda 7 perguntas rápidas e descubra por onde faz mais sentido você começar, qual é o seu ponto de partida e o que estudar primeiro.</p>
+    <div class="chips"><span>✓ Sem cadastro</span><span>✓ Resultado na hora</span><span>✓ Para quem está começando ou já vende</span></div>
+    <button class="btn" onclick="start()">Quero descobrir meu caminho →</button>
+    <p class="small" style="margin-top:22px">Feito pela Kallsten Assessoria, uma operação que vende mais de R$ 12 milhões por ano no Mercado Livre e na Shopee.</p>
+  </section>
+
+  <!-- QUESTION -->
+  <section class="screen" id="q">
+    <div class="step" id="qstep"></div>
+    <div class="progress"><div id="bar"></div></div>
+    <h2 id="qtitle"></h2>
+    <p class="hint" id="qhint"></p>
+    <div class="opts" id="opts"></div>
+    <div class="nav">
+      <button class="link" onclick="back()">← Voltar</button>
+      <button class="btn" id="next" disabled onclick="next()">Continuar</button>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section class="screen" id="res">
+    <span class="pill">Seu resultado está pronto</span>
+    <div class="hero-res">
+      <span class="tag" id="rtag"></span>
+      <h2 id="rtitle"></h2>
+      <p id="rdesc"></p>
+    </div>
+
+    <div class="grid3">
+      <div class="mini"><b>Comece por</b><strong id="rmkt"></strong><span id="rmktwhy"></span></div>
+      <div class="mini"><b>Seu foco agora</b><strong id="rfocus"></strong><span id="rfocuswhy"></span></div>
+      <div class="mini"><b>Seu ritmo</b><strong id="rpace"></strong><span id="rpacewhy"></span></div>
+    </div>
+
+    <div class="card">
+      <h2 style="font-size:22px">Seus próximos passos</h2>
+      <ol class="plan" id="rplan"></ol>
+    </div>
+
+    <div class="math">
+      <h2 style="font-size:22px;margin-top:0">A matemática do lucro pequeno</h2>
+      <p class="hint">Você não precisa de um produto milagroso. Veja um produto de R$ 49,90, com custo de R$ 23,50, depois de todas as taxas:</p>
+      <div class="row"><span>Lucro por venda no Mercado Livre</span><b>≈ R$ 8,27</b></div>
+      <div class="row"><span>Lucro por venda na Shopee</span><b>≈ R$ 7,93</b></div>
+      <div class="row"><span>20 vendas por dia × R$ 8 × 30 dias</span><b>=</b></div>
+      <div class="big">R$ 4.800 de lucro no mês</div>
+      <p class="small">Simulação hipotética para ilustrar a conta, com um único produto. Considera produto de 0,3 kg, embalagem de R$ 1, imposto de 6%, tarifa de 12% no Clássico do Mercado Livre e comissão para CNPJ na Shopee (tabelas de out/2026). Não é previsão nem promessa de resultado: vender 20 unidades por dia depende de produto, preço, concorrência, capital e dedicação.</p>
+    </div>
+
+    <div class="cta">
+      <h3 id="ctah">O Guia Completo foi feito para o seu momento</h3>
+      <p id="ctap">96 páginas sobre Mercado Livre e Shopee, do produto à operação, mais a Planilha de Precificação que faz essa conta por você.</p>
+      <a class="btn" id="ctabtn" href="#">Conhecer o Guia Completo →</a>
+    </div>
+    <p style="text-align:center"><button class="link" onclick="restart()">Refazer o quiz</button></p>
+  </section>
+</main>
+
+<div class="foot">Kallsten Assessoria · Material independente, sem vínculo com Mercado Livre ou Shopee. O resultado do quiz é uma orientação geral e não representa promessa de ganho.</div>
+
+<script>
+// ====== CONFIGURE AQUI ======
+const PAGINA_DE_VENDAS = '/guia/'; // endereço onde a página de vendas será publicada
+// ============================
+
+const Q = [
+  {t:'O que mais te motiva a vender pela internet?', h:'Escolha o que mais combina com você.', k:'goal', o:[
+    ['extra','Ter uma renda extra além do que já ganho'],
+    ['own','Construir meu próprio negócio'],
+    ['grow','Já vendo e quero crescer com mais lucro'],
+    ['curious','Estou curioso e quero entender como funciona']]},
+  {t:'Qual é a sua experiência com vendas online?', h:'Tudo bem se for zero. O quiz também é para quem está começando.', k:'exp', o:[
+    ['zero','Nunca vendi nada pela internet'],
+    ['tried','Já tentei, mas não tive o resultado que esperava'],
+    ['some','Já fiz algumas vendas, sem estrutura'],
+    ['pro','Já vendo com frequência em marketplace']]},
+  {t:'Que tipo de produto você imagina vender?', h:'Pense na faixa de preço para o comprador.', k:'ticket', o:[
+    ['low','Itens baratos e de impulso (até R$ 50)'],
+    ['mid','Itens de preço médio (R$ 50 a R$ 150)'],
+    ['high','Itens mais caros (acima de R$ 150)'],
+    ['unknown','Ainda não faço ideia']]},
+  {t:'Quanto você tem disponível para o primeiro estoque?', h:'Sem julgamentos: dá para começar estudando.', k:'cap', o:[
+    ['none','Nada no momento'],
+    ['s','Até R$ 500'],
+    ['m','De R$ 500 a R$ 2.000'],
+    ['l','Mais de R$ 2.000']]},
+  {t:'Quanto tempo por semana você pode dedicar?', h:'Seja realista. Constância vale mais que intensidade.', k:'time', o:[
+    ['t1','Menos de 2 horas'],
+    ['t2','De 2 a 5 horas'],
+    ['t3','De 5 a 10 horas'],
+    ['t4','Mais de 10 horas']]},
+  {t:'Qual é a sua maior dificuldade hoje?', h:'Escolha a que mais te trava.', k:'pain', o:[
+    ['product','Saber o que vender'],
+    ['supplier','Encontrar fornecedor confiável'],
+    ['price','Entender taxas e saber se vai sobrar lucro'],
+    ['listing','Fazer anúncios que vendem'],
+    ['ops','Envio, prazos, reputação e penalidades']]},
+  {t:'Qual frase descreve melhor o seu momento?', h:'Última pergunta.', k:'moment', o:[
+    ['now','Quero começar a aprender o quanto antes'],
+    ['understand','Quero entender bem o negócio antes de decidir'],
+    ['money','Quero me organizar financeiramente antes de investir'],
+    ['explore','Ainda estou vendo se faz sentido para mim']]}
+];
+const A = {}; let i = 0;
+const $ = id => document.getElementById(id);
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');window.scrollTo({top:0,behavior:'smooth'})}
+function track(ev){try{ if(window.fbq) fbq('trackCustom',ev); }catch(e){}}
+function start(){i=0;track('QuizStart');render();show('q')}
+function render(){
+  const q=Q[i]; $('qstep').textContent=(i===Q.length-1?'Última pergunta':'Pergunta '+(i+1)+' de '+Q.length);
+  $('bar').style.width=((i)/Q.length*100)+'%'; $('qtitle').textContent=q.t; $('qhint').textContent=q.h;
+  const box=$('opts'); box.innerHTML='';
+  q.o.forEach(([v,l])=>{const b=document.createElement('button');b.className='opt'+(A[q.k]===v?' sel':'');b.innerHTML='<span class="dot"></span><span></span>';b.lastChild.textContent=l;
+    b.onclick=()=>{A[q.k]=v;render();setTimeout(next,220)};box.appendChild(b)});
+  $('next').disabled=!A[q.k]; $('next').textContent=i===Q.length-1?'Ver meu resultado':'Continuar';
+}
+function next(){ if(!A[Q[i].k]) return; if(i<Q.length-1){i++;render()} else finish() }
+function back(){ if(i===0){show('intro')} else {i--;render()} }
+function restart(){Object.keys(A).forEach(k=>delete A[k]);show('intro')}
+
+function finish(){
+  $('bar').style.width='100%'; track('QuizComplete');
+  // marketplace
+  let ml=0, sp=0;
+  if(A.ticket==='low') sp+=3; if(A.ticket==='mid') ml+=2; if(A.ticket==='high') ml+=3;
+  if(A.cap==='none'||A.cap==='s') sp+=1; if(A.cap==='l') ml+=1;
+  if(A.time==='t1') sp+=0; if(A.time==='t4') ml+=1;
+  let mkt, mktwhy;
+  if(A.exp==='pro'){mkt='Os dois marketplaces';mktwhy='Você já vende: o próximo passo é replicar seus campeões no outro canal, com preço calculado para as taxas de cada um.'}
+  else if(A.ticket==='unknown'&&Math.abs(ml-sp)<2){mkt='Mercado Livre';mktwhy='Sem produto definido, o Mercado Livre é o melhor lugar para estudar demanda pela busca. A Shopee entra depois.'}
+  else if(sp>ml){mkt='Shopee';mktwhy='Itens de menor valor e de impulso costumam render bem lá, e kits ajudam a diluir o valor fixo da comissão.'}
+  else {mkt='Mercado Livre';mktwhy='Produtos de preço médio e alto, com busca forte, tendem a ter melhor margem no Mercado Livre.'}
+
+  // profile
+  let tag,title,desc;
+  if(A.exp==='pro'||A.goal==='grow'){tag='Perfil: Escala';title='Você já está no jogo. Agora é hora de lucrar mais e errar menos.';desc='Seu desafio não é começar: é saber quanto sobra em cada venda, controlar estoque e caixa e crescer nos dois marketplaces sem perder reputação.'}
+  else if(A.exp==='tried'||A.exp==='some'){tag='Perfil: Recomeço';title='Você já deu os primeiros passos. Falta método.';desc='Quem tentou e não teve resultado quase sempre esbarrou em três pontos: produto escolhido sem pesquisa, preço sem conta completa e anúncio fraco. Dá para corrigir os três.'}
+  else if(A.cap==='none'||A.moment==='money'||A.moment==='explore'){tag='Perfil: Explorador';title='Seu momento é de aprender antes de investir.';desc='Ótima decisão. Entender produto, taxas e operação antes de comprar estoque evita os erros que mais custam caro para quem começa.'}
+  else {tag='Perfil: Primeiro Lote';title='Você está pronto para fazer as primeiras vendas.';desc='Você tem disposição e algum capital. O segredo agora é escolher bem o primeiro produto, comprar um lote pequeno e fazer a conta certa antes de anunciar.'}
+
+  const focusMap={product:['Escolher o produto','Use critérios e pesquisa dentro das plataformas, não o gosto pessoal (capítulo 3 do guia).'],
+    supplier:['Encontrar fornecedor','Saiba avaliar, negociar e começar com lote-teste e nota fiscal (capítulo 4).'],
+    price:['Precificação','Some tarifa, frete, comissão, imposto e embalagem antes de definir o preço (capítulos 5, 6 e 11).'],
+    listing:['Anúncios que vendem','Título, fotos, ficha técnica e prova social fazem a diferença (capítulos 7 e 12).'],
+    ops:['Operação sem penalidade','Prazos, Full, reputação e pontos de penalidade (capítulos 8, 9, 13 e 14).']};
+  const paceMap={t1:['Devagar e sempre','Com menos de 2 horas por semana, estude um capítulo por semana e comece pelo produto.'],
+    t2:['Constante','De 2 a 5 horas dão para estudar e lançar o primeiro anúncio em cerca de um mês.'],
+    t3:['Acelerado','Com 5 a 10 horas, você consegue seguir o plano de 90 dias do guia no ritmo previsto.'],
+    t4:['Intensivo','Mais de 10 horas permitem lançar, testar e otimizar vários produtos em paralelo.']};
+
+  const plan=[];
+  if(A.cap==='none'||A.moment==='money') plan.push('Estude estrutura, produto e precificação antes de comprar qualquer estoque.');
+  if(A.exp==='zero'||A.exp==='tried') plan.push('Liste 15 produtos candidatos e passe todos pela matriz de decisão.');
+  plan.push('Calcule o lucro real de cada produto '+(mkt==='Os dois marketplaces'?'no Mercado Livre e na Shopee':(mkt==='Shopee'?'na Shopee':'no Mercado Livre'))+' com a Planilha de Precificação.');
+  if(A.cap!=='none'&&A.exp!=='pro') plan.push('Compre um lote-teste pequeno, com nota fiscal, de um fornecedor avaliado.');
+  if(A.exp==='pro') plan.push('Faça a curva ABC e garanta estoque dos produtos que mais faturam.');
+  plan.push('Publique (ou revise) o anúncio seguindo o checklist de qualidade.');
+  plan.push(A.exp==='pro'?'Replique os campeões no segundo marketplace e avalie o Full para os produtos A.':'Acompanhe visitas, conversão e margem toda semana e ajuste.');
+
+  $('rtag').textContent=tag; $('rtitle').textContent=title; $('rdesc').textContent=desc;
+  $('rmkt').textContent=mkt; $('rmktwhy').textContent=mktwhy;
+  $('rfocus').textContent=focusMap[A.pain][0]; $('rfocuswhy').textContent=focusMap[A.pain][1];
+  $('rpace').textContent=paceMap[A.time][0]; $('rpacewhy').textContent=paceMap[A.time][1];
+  $('rplan').innerHTML=''; plan.slice(0,5).forEach(t=>{const li=document.createElement('li');li.textContent=t;$('rplan').appendChild(li)});
+  const sep=PAGINA_DE_VENDAS.includes('?')?'&':'?';
+  $('ctabtn').href=PAGINA_DE_VENDAS+sep+'utm_source=quiz&utm_medium=resultado&utm_content='+encodeURIComponent(tag.replace('Perfil: ','').toLowerCase())+'#oferta';
+  if(A.cap==='none'||A.moment==='explore'){ $('ctah').textContent='Comece aprendendo, sem gastar com estoque'; }
+  show('res');
+}
+</script>
+</body>
+</html>
