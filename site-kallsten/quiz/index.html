@@ -31,6 +31,9 @@ body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;colo
 .pill{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:30px;padding:6px 14px;font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent)}
 h1{font-size:clamp(30px,6vw,44px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 14px;color:var(--navy);font-weight:900}
 h1 span{background:linear-gradient(transparent 58%,#FFE38A 58%)}
+h1 span.ml{background:linear-gradient(transparent 58%,#FFE600 58%)}
+h1 span.sp{background:linear-gradient(transparent 58%,#FFB49C 58%)}
+.math .row.spr b{color:#C93E1C}
 h2{font-size:clamp(22px,4.6vw,30px);line-height:1.18;letter-spacing:-.01em;color:var(--navy);margin:8px 0 6px;font-weight:800}
 .lead{font-size:18px;color:#3b4852}
 .chips{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 26px}
@@ -110,7 +113,7 @@ src="https://www.facebook.com/tr?id=1080900564773804&ev=PageView&noscript=1"
   <!-- INTRO -->
   <section class="screen on" id="intro">
     <span class="pill">7 perguntas · cerca de 1 minuto · gratuito</span>
-    <h1>Mercado Livre ou Shopee: <span>qual é o seu caminho?</span></h1>
+    <h1><span class="ml">Mercado Livre</span> ou <span class="sp">Shopee</span>: qual é o seu caminho?</h1>
     <p class="lead">Cada marketplace favorece um tipo de produto, de capital e de rotina. Responda 7 perguntas rápidas e descubra por onde faz mais sentido você começar, qual é o seu ponto de partida e o que estudar primeiro.</p>
     <div class="chips"><span>✓ Sem cadastro</span><span>✓ Resultado na hora</span><span>✓ Para quem está começando ou já vende</span></div>
     <button class="btn" onclick="start()">Quero descobrir meu caminho →</button>
@@ -154,7 +157,7 @@ src="https://www.facebook.com/tr?id=1080900564773804&ev=PageView&noscript=1"
       <h2 style="font-size:22px;margin-top:0">A matemática do lucro pequeno</h2>
       <p class="hint">Você não precisa de um produto milagroso. Veja um produto de R$ 49,90, com custo de R$ 23,50, depois de todas as taxas:</p>
       <div class="row"><span>Lucro por venda no Mercado Livre</span><b>≈ R$ 8,27</b></div>
-      <div class="row"><span>Lucro por venda na Shopee</span><b>≈ R$ 7,93</b></div>
+      <div class="row spr"><span>Lucro por venda na Shopee</span><b>≈ R$ 7,93</b></div>
       <div class="row"><span>20 vendas por dia × R$ 8 × 30 dias</span><b>=</b></div>
       <div class="big">R$ 4.800 de lucro no mês</div>
       <p class="small">Simulação hipotética para ilustrar a conta, com um único produto. Considera produto de 0,3 kg, embalagem de R$ 1, imposto de 6%, tarifa de 12% no Clássico do Mercado Livre e comissão para CNPJ na Shopee (tabelas de out/2026). Não é previsão nem promessa de resultado: vender 20 unidades por dia depende de produto, preço, concorrência, capital e dedicação.</p>
@@ -271,7 +274,7 @@ function finish(){
   plan.push(A.exp==='pro'?'Replique os campeões no segundo marketplace e avalie o Full para os produtos A.':'Acompanhe visitas, conversão e margem toda semana e ajuste.');
 
   $('rtag').textContent=tag; $('rtitle').textContent=title; $('rdesc').textContent=desc;
-  $('rmkt').textContent=mkt; $('rmktwhy').textContent=mktwhy;
+  $('rmkt').textContent=mkt; $('rmktwhy').textContent=mktwhy; $('rmkt').style.color=(mkt==='Shopee'?'#C93E1C':'');
   $('rfocus').textContent=focusMap[A.pain][0]; $('rfocuswhy').textContent=focusMap[A.pain][1];
   $('rpace').textContent=paceMap[A.time][0]; $('rpacewhy').textContent=paceMap[A.time][1];
   $('rplan').innerHTML=''; plan.slice(0,5).forEach(t=>{const li=document.createElement('li');li.textContent=t;$('rplan').appendChild(li)});
