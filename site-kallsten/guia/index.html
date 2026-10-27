@@ -156,6 +156,28 @@ footer b{color:#fff}
   body{padding-bottom:76px}
 }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1080900564773804');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'Guia Completo ML e Shopee', value: 49.99, currency: 'BRL'});
+document.addEventListener('click', function(e){
+  var a = e.target.closest && e.target.closest('a[href*="pay.kiwify.com.br"]');
+  if (a) fbq('track', 'InitiateCheckout', {content_name: 'Guia Completo ML e Shopee', value: 49.99, currency: 'BRL'});
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1080900564773804&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -366,7 +388,7 @@ footer b{color:#fff}
   <div class="wrap">
     <p><b>Kallsten Assessoria</b> · Os dados do vendedor e o suporte ao comprador estão disponíveis na página de pagamento e no e-mail de confirmação da compra.</p>
     <p>Este é um material independente e não possui vínculo, patrocínio ou aprovação do Mercado Livre ou da Shopee. "Mercado Livre" e "Shopee" são marcas de seus respectivos donos. Este site não é parte do site do Facebook ou da Meta Platforms, Inc. O faturamento citado refere-se à operação da Kallsten e não é promessa de resultado: os resultados variam de pessoa para pessoa e não há garantia de ganhos.</p>
-    <p><a href="#" style="color:#9AA6AD">Termos de uso</a> · <a href="#" style="color:#9AA6AD">Política de privacidade</a></p>
+    <p><a href="/termos/" style="color:#9AA6AD">Termos de uso</a> · <a href="/privacidade/" style="color:#9AA6AD">Política de privacidade</a></p>
   </div>
 </footer>
 
