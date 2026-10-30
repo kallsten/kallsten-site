@@ -400,5 +400,14 @@ src="https://www.facebook.com/tr?id=1080900564773804&ev=PageView&noscript=1"
 </footer>
 
 <div class="sticky"><a class="btn" href="#oferta">Quero o guia · R$ 49,99</a></div>
+<script>
+/* Passa a origem do anúncio (UTMs) para o checkout da Kiwify */
+(function(){var K=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','src','sck'],p=new URLSearchParams(location.search),s={},hit=false;
+K.forEach(function(k){if(p.get(k)){s[k]=p.get(k);hit=true}});
+try{if(hit)localStorage.setItem('kls_utm',JSON.stringify({t:Date.now(),v:s}));else{var o=JSON.parse(localStorage.getItem('kls_utm')||'null');if(o&&Date.now()-o.t<30*864e5)s=o.v}}catch(e){}
+if(!Object.keys(s).length)return;
+document.querySelectorAll('a[href*="pay.kiwify.com.br"]').forEach(function(a){try{var u=new URL(a.href);Object.keys(s).forEach(function(k){if(!u.searchParams.get(k))u.searchParams.set(k,s[k])});a.href=u.toString()}catch(e){}});
+})();
+</script>
 </body>
 </html>
